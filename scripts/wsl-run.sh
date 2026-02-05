@@ -4,6 +4,6 @@ set -euo pipefail
 rootDir="$(cd "$(dirname "$0")/.." && pwd)"
 odooDir="$rootDir/src/odoo"
 
-cd "$odooDir"
-source .venv/bin/activate
-./odoo-bin -c "$rootDir/odoo.conf"
+cd "$rootDir"
+source "$odooDir/.venv/bin/activate"
+"$odooDir/odoo-bin" -c "$rootDir/odoo.conf"
