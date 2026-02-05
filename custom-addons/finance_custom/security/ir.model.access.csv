@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_finance_custom_note_account_user,finance.custom.note account user,model_finance_custom_note,account.group_account_user,1,1,1,1
+access_finance_custom_note_system,finance.custom.note system,model_finance_custom_note,base.group_system,1,1,1,1

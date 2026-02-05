@@ -1,0 +1,48 @@
+<odoo>
+    <record id="view_finance_custom_note_tree" model="ir.ui.view">
+        <field name="name">finance.custom.note.tree</field>
+        <field name="model">finance.custom.note</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="date" />
+                <field name="name" />
+                <field name="partner_id" />
+                <field name="amount" />
+            </list>
+        </field>
+    </record>
+
+    <record id="view_finance_custom_note_form" model="ir.ui.view">
+        <field name="name">finance.custom.note.form</field>
+        <field name="model">finance.custom.note</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="date" />
+                        <field name="partner_id" />
+                        <field name="amount" />
+                    </group>
+                    <group>
+                        <field name="note" widget="text" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_partner_form_finance_custom_notes" model="ir.ui.view">
+        <field name="name">res.partner.form.finance.custom.notes</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button type="object" name="actionViewFinanceCustomNotes" class="oe_stat_button"
+                    icon="fa-sticky-note">
+                    <field name="finance_custom_note_count" widget="statinfo" string="Notes" />
+                </button>
+            </xpath>
+        </field>
+    </record>
+</odoo>

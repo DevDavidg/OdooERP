@@ -1,0 +1,14 @@
+<odoo>
+    <record id="action_finance_custom_note" model="ir.actions.act_window">
+        <field name="name">Notes</field>
+        <field name="res_model">finance.custom.note</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{}</field>
+    </record>
+
+    <menuitem id="menu_finance_custom_root" name="Finance Custom" parent="account.menu_finance"
+        sequence="250" />
+    <menuitem id="menu_finance_custom_notes" name="Notes"
+        parent="finance_custom.menu_finance_custom_root"
+        action="finance_custom.action_finance_custom_note" sequence="10" />
+</odoo>
